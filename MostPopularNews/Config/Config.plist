@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BoldFont</key>
+	<string>GEThameen-DemiBold</string>
+	<key>SemiBoldFont</key>
+	<string>GEThameen-Book</string>
+	<key>RegularFont</key>
+	<string>GEThameen-Light</string>
+	<key>TestUrl</key>
+	<string>http://softbyte.online/stayhome/api/</string>
+	<key>LiveUrl</key>
+	<string>https://stayhomeksa.com/api/</string>
+	<key>TestMode</key>
+	<false/>
+</dict>
+</plist>
