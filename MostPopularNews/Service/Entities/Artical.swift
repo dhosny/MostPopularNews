@@ -12,7 +12,7 @@ struct Artical: Codable {
     var id, assetID: Int?
     var source: Source?
     var publishedDate, updated, section: String?
-    var subsection: Subsection?
+    //var subsection: Subsection?
     var nytdsection, adxKeywords: String?
     //var column: JSONNull?
     var byline: String?
@@ -27,7 +27,7 @@ struct Artical: Codable {
         case assetID = "asset_id"
         case source
         case publishedDate = "published_date"
-        case updated, section, subsection, nytdsection
+        case updated, section, nytdsection
         case adxKeywords = "adx_keywords"
         case byline, type, title, abstract
         case desFacet = "des_facet"
