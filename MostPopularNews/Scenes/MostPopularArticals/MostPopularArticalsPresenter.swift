@@ -20,6 +20,7 @@ protocol MostPopularArticalsPresenter {
     func loadData()
     func numberOfTableRowsPerSection(section: Int) -> Int
     func configureTableCell(cell: ArticalTableViewCell, forSection section: Int, forRow row: Int)
+    func getDataAt(section: Int, forRow row: Int) -> Artical
 }
 
 class MostPopularArticalsPresenterImp: MostPopularArticalsPresenter {
@@ -60,15 +61,18 @@ class MostPopularArticalsPresenterImp: MostPopularArticalsPresenter {
     
     func configureTableCell(cell: ArticalTableViewCell, forSection section: Int, forRow row: Int) {
         
-        cell.display(title: dataList[row].title ?? "")
-        cell.display(subtitle: dataList[row].abstract ?? "")
-        cell.display(description: dataList[row].byline ?? "")
-        cell.display(dateStr: dataList[row].publishedDate ?? "")
-        cell.setImg(url: dataList[row].media?[0].mediaMetadata?[0].url ?? "")
+        let artical = getDataAt(section: section, forRow: row)
+        cell.display(title: artical.title ?? "")
+        cell.display(subtitle: artical.abstract ?? "")
+        cell.display(description: artical.byline ?? "")
+        cell.display(dateStr: artical.publishedDate ?? "")
+        cell.setImg(url: artical.media?[0].mediaMetadata?[0].url ?? "")
        
     }
         
-    
+    func getDataAt(section: Int, forRow row: Int) -> Artical{
+        return dataList[row]
+    }
 
     
 }
