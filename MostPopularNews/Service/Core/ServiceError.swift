@@ -1,6 +1,5 @@
 //
 //  ServiceError.swift
-//  Tamm
 //
 //  Created by Dalia Hosny on 3/21/20.
 //  Copyright © 2020 Dalia Hosny. All rights reserved.

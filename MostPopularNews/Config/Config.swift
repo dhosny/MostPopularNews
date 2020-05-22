@@ -46,21 +46,13 @@ class Config {
         return nil
     }
     
-    var imageUrl: String? {
-        let key = isTest ? "TestImageURL" : "LiveImageURL"
-        if let imageURL = properties?.object(forKey: key) as? String {
-            return imageURL
+    var apiKey: String? {
+        let key = "APIKey"
+        if let value = properties?.object(forKey: key) as? String {
+            return value
         }
         return nil
                 
-    }
-    
-    var applicationToken: String? {
-        let key = isTest ? "TestApplicationToken" : "LiveApplicationToken"
-        if let applicationToken = properties?.object(forKey: key) as? String {
-            return applicationToken
-        }
-        return nil
     }
     
     var isTest: Bool {
@@ -68,27 +60,6 @@ class Config {
             return offline
         }
         return false
-    }
-    
-    var boldFont: String {
-        if let font = properties?.object(forKey: "BoldFont") as? String {
-            return font
-        }
-        return ""
-    }
-    
-    var semiBoldFont: String {
-        if let font = properties?.object(forKey: "SemiBoldFont") as? String {
-            return font
-        }
-        return ""
-    }
-    
-    var regularFont: String {
-        if let font = properties?.object(forKey: "RegularFont") as? String {
-            return font
-        }
-        return ""
     }
     
 }

@@ -29,7 +29,7 @@ struct Artical: Codable {
         case publishedDate = "published_date"
         case updated, section, subsection, nytdsection
         case adxKeywords = "adx_keywords"
-        case column, byline, type, title, abstract
+        case byline, type, title, abstract
         case desFacet = "des_facet"
         case orgFacet = "org_facet"
         case perFacet = "per_facet"
